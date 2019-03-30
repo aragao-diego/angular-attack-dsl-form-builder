@@ -4,7 +4,7 @@ export class Input extends Component {
     constructor() {
         super();
         this.name = 'Input';
-        this.type = 'input';
+        this.type = InputComponent;
         this.preview = 'assets/img/input.png';
         this.icon = 'text_fields';
     }
