@@ -20,8 +20,6 @@ export class EditorComponent implements OnInit {
   all = [];
   componentsList = COMPONENT_LIST;
 
- 
-
   constructor() { }
 
   ngOnInit() {

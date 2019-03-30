@@ -6,6 +6,9 @@ const routes: Routes = [
   //   path: 'home',
   //   loadChildren: './modules/home/home.module#HomeModule'
   // }
+
+  { path: '', redirectTo: '/editor', pathMatch: 'full' },
+
 ];
 
 @NgModule({
