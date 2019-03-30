@@ -1,0 +1,12 @@
+<div class="editor-design">
+  <div id="all" cdkDropList [cdkDropListData]="data" class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let row of data" [cdkDragData]="row" cdkDrag>
+      
+        <app-row [data]="row"></app-row>
+
+    </div>
+  </div>
+
+
+
+</div>

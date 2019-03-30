@@ -1,0 +1,5 @@
+<div cdkDropList 
+  cdkDropListOrientation="horizontal" 
+  class="row" (cdkDropListDropped)="order($event)">
+  <div class="example-box" *ngFor="let component of data" cdkDrag>{{component}}</div>
+</div>

@@ -6,9 +6,11 @@ import { EditorComponent } from './components/editor/editor.component';
 import { EditorRoutingModule } from './editor-routing.module';
 import { ToolboxComponent } from './components/toolbox/toolbox.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { EditorDesignComponent } from './components/editor-design/editor-design.component';
+import { RowComponent } from './components/row/row.component';
 
 @NgModule({
-  declarations: [EditorComponent, ToolboxComponent],
+  declarations: [EditorComponent, ToolboxComponent, EditorDesignComponent, RowComponent],
   imports: [
     CommonModule,
     EditorRoutingModule,

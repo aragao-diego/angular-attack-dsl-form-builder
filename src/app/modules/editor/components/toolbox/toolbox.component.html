@@ -1,5 +1,19 @@
-<div class="toolbox" cdkDrag>
-  I can only be dragged using the handle
+<!-- <div class="toolbox" cdkDrag>
+    <div class="example-container">      
+        <div
+          id="even"
+          cdkDropList
+          [cdkDropListData]="data"
+          
+          class="example-list"
+          (cdkDropListDropped)="drop($event)"
+          >
+          <div
+            class="example-box"
+            *ngFor="let number of data"
+            cdkDrag
+            [cdkDragData]="number">{{number}}</div>
+        </div>
 
   <div class="toolbox-handle" cdkDragHandle>
     <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
@@ -8,5 +22,15 @@
       </path>
       <path d="M0 0h24v24H0z" fill="none"></path>
     </svg>
+  </div>
+</div> -->
+
+<div class="toolbox">
+  <div class="example-container">
+    <div id="even" cdkDropList [cdkDropListData]="data" class="example-list"
+      cdkDropListConnectedTo="all"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let number of data" cdkDrag [cdkDragData]="number">{{number}}</div>
+    </div>
   </div>
 </div>

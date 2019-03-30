@@ -2,22 +2,19 @@ import { Component, OnInit, Input } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem, CdkDrag } from '@angular/cdk/drag-drop';
 
 @Component({
-  selector: 'app-toolbox',
-  templateUrl: './toolbox.component.html',
-  styleUrls: ['./toolbox.component.scss']
+  selector: 'app-editor-design',
+  templateUrl: './editor-design.component.html',
+  styleUrls: ['./editor-design.component.scss']
 })
-export class ToolboxComponent implements OnInit {
+export class EditorDesignComponent implements OnInit {
 
+  rows = [];
   @Input() data;
-  @Input() connected;
   @Input() drop;
+  even = [10];
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
-  
 
   /** Predicate function that only allows even numbers to be dropped into a list. */
   evenPredicate(item: CdkDrag<number>) {
@@ -27,6 +24,9 @@ export class ToolboxComponent implements OnInit {
   /** Predicate function that doesn't allow items to be dropped into a list. */
   noReturnPredicate() {
     return false;
+  }
+
+  ngOnInit() {
   }
 
 }
