@@ -1,5 +1,5 @@
-import { Component } from './component';
+import { ComponentDefinition } from './component-defintion';
 
 export class Row {
-    components: Array<Component>;
+    components: Array<ComponentDefinition>;
 }

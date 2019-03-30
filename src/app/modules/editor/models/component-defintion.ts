@@ -1,7 +1,7 @@
 import { ComponentConfig } from './component-config';
-export class Component {
+export class ComponentDefinition {
     name: string;
-    type: string;
+    type: { new(...args: any[]): any; };
     preview: string;
     icon: string;
     config: ComponentConfig;

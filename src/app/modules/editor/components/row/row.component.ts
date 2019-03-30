@@ -1,7 +1,7 @@
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material';
 import { ComponentConfigDialogComponent } from './../component-config-dialog/component-config-dialog.component';
-import { Component, OnInit, Input } from '@angular/core';
-import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
 @Component({
   selector: 'app-row',
@@ -17,7 +17,6 @@ export class RowComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.id);
-    
   }
 
   order(event: CdkDragDrop<any[]>) {

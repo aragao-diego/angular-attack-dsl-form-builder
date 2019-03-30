@@ -16,8 +16,8 @@ export class EditorComponent implements OnInit {
 
 
 
-  even = [[1]];
-  all = [[1, 2]];
+  even = [[]];
+  all = [];
   componentsList = COMPONENT_LIST;
 
  

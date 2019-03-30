@@ -1,3 +1,4 @@
+import { ComponentContainerDirective } from './components/component-compiler/component-container.directive';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
@@ -14,9 +15,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { ComponentConfigDialogComponent } from './components/component-config-dialog/component-config-dialog.component';
 import { MatDialogModule } from '@angular/material';
 import { ComponentCompilerComponent } from './components/component-compiler/component-compiler.component';
+import { TestComponent } from './components/test/test.component';
 
 @NgModule({
-  declarations: [EditorComponent, ToolboxComponent, EditorDesignComponent, RowComponent, ComponentConfigDialogComponent, ComponentCompilerComponent],
+  declarations: [
+    EditorComponent,
+    ToolboxComponent,
+    EditorDesignComponent,
+    RowComponent,
+    ComponentConfigDialogComponent,
+    ComponentCompilerComponent,
+    TestComponent,
+    ComponentContainerDirective
+  ],
   imports: [
     CommonModule,
     EditorRoutingModule,
@@ -32,7 +43,8 @@ import { ComponentCompilerComponent } from './components/component-compiler/comp
     EditorComponent
   ],
   entryComponents: [
-    ComponentConfigDialogComponent
+    ComponentConfigDialogComponent,
+    TestComponent
   ]
 })
 export class EditorModule { }
