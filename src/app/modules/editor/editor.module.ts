@@ -2,7 +2,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatDialogModule, MatFormFieldModule } from '@angular/material';
+import { MatDialogModule, MatFormFieldModule, MatSelect, MatSelectModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material';
 import { MatDividerModule } from '@angular/material/divider';
@@ -21,6 +21,7 @@ import { EditorRoutingModule } from './editor-routing.module';
 import { MatInputModule } from '@angular/material';
 import { CheckboxComponent } from './components/component-compiler/components/checkbox/checkbox.component';
 import { SelectComponent } from './components/component-compiler/components/select/select.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -35,8 +36,9 @@ import { SelectComponent } from './components/component-compiler/components/sele
     MatIconModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatCheckboxModule
-  ],
+    MatCheckboxModule,
+    MatSelectModule
+    ],
   declarations: [
     EditorComponent,
     ToolboxComponent,
@@ -59,7 +61,8 @@ import { SelectComponent } from './components/component-compiler/components/sele
     ComponentConfigDialogComponent,
     TestComponent,
     InputComponent,
-    CheckboxComponent
+    CheckboxComponent,
+    SelectComponent
   ]
 })
 export class EditorModule { }
