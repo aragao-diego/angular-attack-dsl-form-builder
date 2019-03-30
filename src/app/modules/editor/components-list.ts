@@ -19,7 +19,7 @@ export class Checkbox extends ComponentDefinition {
         this.name = 'Checkbox';
         this.type = CheckboxComponent;
         this.preview = '';
-        this.icon = '';
+        this.icon = 'check_box';
     }
 }
 
@@ -29,7 +29,7 @@ export class Select extends ComponentDefinition {
         this.name = 'Select';
         this.type = SelectComponent;
         this.preview = '';
-        this.icon = '';
+        this.icon = 'arrow_drop_down';
     }
 }
 
