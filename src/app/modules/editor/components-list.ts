@@ -24,5 +24,6 @@ export class Checkbox extends ComponentDefinition {
 }
 
 export const COMPONENT_LIST = [
-    new Input()
+    new Input(),
+    new Checkbox()
 ];
