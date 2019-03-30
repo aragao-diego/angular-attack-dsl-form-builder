@@ -1,4 +1,4 @@
-<!-- <div class="toolbox" cdkDrag>
+<!-- <div class="toolbox" >
     <div class="example-container">      
         <div
           id="even"
@@ -15,6 +15,26 @@
             [cdkDragData]="number">{{number}}</div>
         </div>
 
+  
+</div> -->
+
+<div class="toolbox" cdkDrag>
+  <div class="example-container">
+    <div id="even" cdkDropList [cdkDropListData]="data" class="example-list" cdkDropListConnectedTo="all"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let number of data" cdkDrag [cdkDragData]="number">{{number}}</div>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="example-container">
+    <div id="even" cdkDropList [cdkDropListData]="data" class="example-list" [cdkDropListConnectedTo]="ids"
+      (cdkDropListDropped)="addComponent($event)">
+      <div class="example-box" *ngFor="let component of componentsList" cdkDrag [cdkDragData]="component">
+        <mat-icon>{{component.icon}}</mat-icon>
+      </div>
+    </div>
+  </div>
+
   <div class="toolbox-handle" cdkDragHandle>
     <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
       <path
@@ -23,22 +43,4 @@
       <path d="M0 0h24v24H0z" fill="none"></path>
     </svg>
   </div>
-</div> -->
-
-<div class="toolbox">
-  <div class="example-container">
-    <div id="even" cdkDropList [cdkDropListData]="data" class="example-list"
-      cdkDropListConnectedTo="all"
-      (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let number of data" cdkDrag [cdkDragData]="number">{{number}}</div>
-    </div>
-  </div>
-  <mat-divider></mat-divider>
-  <div class="example-container">
-      <div id="even" cdkDropList [cdkDropListData]="data" class="example-list"
-        [cdkDropListConnectedTo]="ids"
-        (cdkDropListDropped)="addComponent($event)">
-        <div class="example-box" *ngFor="let component of componentsList" cdkDrag [cdkDragData]="component">{{component}}</div>
-      </div>
-    </div>
 </div>

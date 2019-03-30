@@ -1,5 +1,7 @@
+import { ComponentConfigDialogComponent } from './../component-config-dialog/component-config-dialog.component';
 import { Component, OnInit, Input } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
 @Component({
   selector: 'app-row',
@@ -11,11 +13,11 @@ export class RowComponent implements OnInit {
   @Input() data;
   @Input() id;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
     console.log(this.id);
-
+    
   }
 
   order(event: CdkDragDrop<any[]>) {
@@ -30,6 +32,17 @@ export class RowComponent implements OnInit {
 
   delete(i) {
     this.data.splice(i, 1);
+  }
+
+  config(i) {
+    const dialogRef = this.dialog.open(ComponentConfigDialogComponent, {
+      width: '250px',
+      data: this.data[i]
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 
 }

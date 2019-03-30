@@ -5,7 +5,10 @@
   class="example-list" (cdkDropListDropped)="order($event)" >
   <div class="example-box" *ngFor="let component of data; let i = index" cdkDrag>
     
-    {{component}}
-    <button mat-icon-button (click)="delete(i)"><mat-icon>delete</mat-icon></button>
+    <img [src]="component.preview" [alt]="component.title" />
+    <div fxLayout="row" fxLayoutAlign="end">
+      <button mat-icon-button (click)="config(i)"><mat-icon>settings</mat-icon></button>
+      <button mat-icon-button (click)="delete(i)"><mat-icon>delete</mat-icon></button>
+    </div>
   </div>
 </div>

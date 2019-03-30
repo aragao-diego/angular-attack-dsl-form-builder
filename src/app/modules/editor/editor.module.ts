@@ -11,9 +11,12 @@ import { EditorDesignComponent } from './components/editor-design/editor-design.
 import { RowComponent } from './components/row/row.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
+import { ComponentConfigDialogComponent } from './components/component-config-dialog/component-config-dialog.component';
+import { MatDialogModule } from '@angular/material';
+import { ComponentCompilerComponent } from './components/component-compiler/component-compiler.component';
 
 @NgModule({
-  declarations: [EditorComponent, ToolboxComponent, EditorDesignComponent, RowComponent],
+  declarations: [EditorComponent, ToolboxComponent, EditorDesignComponent, RowComponent, ComponentConfigDialogComponent, ComponentCompilerComponent],
   imports: [
     CommonModule,
     EditorRoutingModule,
@@ -22,10 +25,14 @@ import { MatButtonModule } from '@angular/material/button';
     DragDropModule,
     MatDividerModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
   ],
   exports: [
     EditorComponent
+  ],
+  entryComponents: [
+    ComponentConfigDialogComponent
   ]
 })
 export class EditorModule { }

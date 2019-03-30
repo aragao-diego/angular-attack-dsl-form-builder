@@ -1,8 +1,8 @@
-import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { EditorDesignComponent } from '../editor-design/editor-design.component';
 import { ToolboxComponent } from '../toolbox/toolbox.component';
-import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
-import { Subject } from 'rxjs';
+import { COMPONENT_LIST } from './../../components-list';
 
 @Component({
   selector: 'app-editor',
@@ -18,7 +18,7 @@ export class EditorComponent implements OnInit {
 
   even = [[1]];
   all = [[1, 2]];
-  componentsList = [1, 2, 3];
+  componentsList = COMPONENT_LIST;
 
  
 
