@@ -14,9 +14,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { ComponentConfigDialogComponent } from './components/component-config-dialog/component-config-dialog.component';
 import { MatDialogModule } from '@angular/material';
 import { ComponentCompilerComponent } from './components/component-compiler/component-compiler.component';
+import { InputComponent } from './input/input.component';
+import { ComponentsCompilerComponent } from './components-compiler/components-compiler.component';
 
 @NgModule({
-  declarations: [EditorComponent, ToolboxComponent, EditorDesignComponent, RowComponent, ComponentConfigDialogComponent, ComponentCompilerComponent],
+  declarations: [EditorComponent, ToolboxComponent, EditorDesignComponent, RowComponent, ComponentConfigDialogComponent, ComponentCompilerComponent, InputComponent, ComponentsCompilerComponent],
   imports: [
     CommonModule,
     EditorRoutingModule,
