@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDialogModule, MatFormFieldModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -32,8 +33,8 @@ import { CheckboxComponent } from './components/component-compiler/components/ch
     MatButtonModule,
     MatIconModule,
     MatDialogModule,
-    MatFormFieldModule
-
+    MatFormFieldModule,
+    MatCheckboxModule
   ],
   declarations: [
     EditorComponent,
@@ -55,7 +56,8 @@ import { CheckboxComponent } from './components/component-compiler/components/ch
   entryComponents: [
     ComponentConfigDialogComponent,
     TestComponent,
-    InputComponent
+    InputComponent,
+    CheckboxComponent
   ]
 })
 export class EditorModule { }
