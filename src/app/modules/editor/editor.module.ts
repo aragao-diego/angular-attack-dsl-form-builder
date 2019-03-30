@@ -17,10 +17,12 @@ import { RowComponent } from './components/row/row.component';
 import { TestComponent } from './components/test/test.component';
 import { ToolboxComponent } from './components/toolbox/toolbox.component';
 import { EditorRoutingModule } from './editor-routing.module';
+import { MatInputModule } from '@angular/material';
 
 @NgModule({
   imports: [
     CommonModule,
+    MatInputModule,
     EditorRoutingModule,
     MatTabsModule,
     FlexLayoutModule,
