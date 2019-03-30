@@ -1,7 +1,7 @@
+import { CheckboxComponent } from './components/component-compiler/components/checkbox/checkbox.component';
 import { InputComponent } from './components/component-compiler/components/input/input.component';
 import { ComponentDefinition } from './models/component-defintion';
-import { TestComponent } from './components/test/test.component';
-import { CheckboxComponent } from './components/component-compiler/components/checkbox/checkbox.component';
+import { SelectComponent } from './components/component-compiler/components/select/select.component';
 
 export class Input extends ComponentDefinition {
     constructor() {
@@ -19,11 +19,22 @@ export class Checkbox extends ComponentDefinition {
         this.name = 'Checkbox';
         this.type = CheckboxComponent;
         this.preview = '';
-        this.icon = '';
+        this.icon = 'check_box';
+    }
+}
+
+export class Select extends ComponentDefinition {
+    constructor() {
+        super();
+        this.name = 'Select';
+        this.type = SelectComponent;
+        this.preview = '';
+        this.icon = 'arrow_drop_down';
     }
 }
 
 export const COMPONENT_LIST = [
     new Input(),
-    new Checkbox()
+    new Checkbox(),
+    new Select()
 ];
