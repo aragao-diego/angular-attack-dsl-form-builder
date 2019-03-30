@@ -18,6 +18,7 @@ import { TestComponent } from './components/test/test.component';
 import { ToolboxComponent } from './components/toolbox/toolbox.component';
 import { EditorRoutingModule } from './editor-routing.module';
 import { MatInputModule } from '@angular/material';
+import { CheckboxComponent } from './components/component-compiler/components/checkbox/checkbox.component';
 
 @NgModule({
   imports: [
@@ -43,7 +44,8 @@ import { MatInputModule } from '@angular/material';
     ComponentCompilerComponent,
     TestComponent,
     ComponentContainerDirective,
-    InputComponent
+    InputComponent,
+    CheckboxComponent
 
   ],
   exports: [
