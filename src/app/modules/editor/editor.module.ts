@@ -22,6 +22,7 @@ import { MatInputModule } from '@angular/material';
 import { CheckboxComponent } from './components/component-compiler/components/checkbox/checkbox.component';
 import { SelectComponent } from './components/component-compiler/components/select/select.component';
 import { FormsModule } from '@angular/forms';
+import { TextAreaComponent } from './components/component-compiler/components/text-area/text-area.component';
 
 @NgModule({
   imports: [
@@ -50,7 +51,8 @@ import { FormsModule } from '@angular/forms';
     ComponentContainerDirective,
     InputComponent,
     CheckboxComponent,
-    SelectComponent
+    SelectComponent,
+    TextAreaComponent
 
   ],
   exports: [
@@ -62,7 +64,8 @@ import { FormsModule } from '@angular/forms';
     TestComponent,
     InputComponent,
     CheckboxComponent,
-    SelectComponent
+    SelectComponent,
+    TextAreaComponent
   ]
 })
 export class EditorModule { }

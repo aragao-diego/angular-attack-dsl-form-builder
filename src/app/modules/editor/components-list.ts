@@ -2,6 +2,7 @@ import { CheckboxComponent } from './components/component-compiler/components/ch
 import { InputComponent } from './components/component-compiler/components/input/input.component';
 import { ComponentDefinition } from './models/component-defintion';
 import { SelectComponent } from './components/component-compiler/components/select/select.component';
+import { TextAreaComponent } from './components/component-compiler/components/text-area/text-area.component';
 
 export class Input extends ComponentDefinition {
     constructor() {
@@ -33,8 +34,19 @@ export class Select extends ComponentDefinition {
     }
 }
 
+export class TextArea extends ComponentDefinition {
+    constructor() {
+        super();
+        this.name = 'TextArea';
+        this.type = TextAreaComponent;
+        this.preview = '';
+        this.icon = 'format_align_justify';
+    }
+}
+
 export const COMPONENT_LIST = [
     new Input(),
     new Checkbox(),
-    new Select()
+    new Select(),
+    new TextArea()
 ];
