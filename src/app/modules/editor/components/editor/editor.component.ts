@@ -25,18 +25,11 @@ export class EditorComponent implements OnInit {
   ngOnInit() {
   }
 
-  drop(event: CdkDragDrop<string[]>) {
+  drop(event: CdkDragDrop<any[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
-      console.log(event);
-      transferArrayItem(event.previousContainer.data,
-        event.container.data,
-        event.previousIndex,
-        event.currentIndex);
-      setTimeout(() => {
-        event.previousContainer.data.push(event.item.data);
-      });
+      event.container.data.push([]);
     }
   }
 
@@ -44,7 +37,6 @@ export class EditorComponent implements OnInit {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
-      console.log(event);
       transferArrayItem(event.previousContainer.data,
         event.container.data,
         event.previousIndex,
