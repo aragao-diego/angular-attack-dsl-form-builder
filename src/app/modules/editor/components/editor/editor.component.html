@@ -8,4 +8,12 @@
     </mat-tab-group>
   </div>
 </div>
-<app-toolbox [data]="even" [connected]="all" [drop]="drop"></app-toolbox>
+<app-toolbox 
+  [componentsList]="componentsList" 
+  [addComponent]="addComponent" 
+  [data]="even" 
+  [connected]="all" 
+  [drop]="drop"
+  [all]="all">
+  
+</app-toolbox>

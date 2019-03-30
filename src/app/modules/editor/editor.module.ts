@@ -1,3 +1,4 @@
+import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -8,6 +9,8 @@ import { ToolboxComponent } from './components/toolbox/toolbox.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { EditorDesignComponent } from './components/editor-design/editor-design.component';
 import { RowComponent } from './components/row/row.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [EditorComponent, ToolboxComponent, EditorDesignComponent, RowComponent],
@@ -16,7 +19,10 @@ import { RowComponent } from './components/row/row.component';
     EditorRoutingModule,
     MatTabsModule,
     FlexLayoutModule,
-    DragDropModule
+    DragDropModule,
+    MatDividerModule,
+    MatButtonModule,
+    MatIconModule
   ],
   exports: [
     EditorComponent

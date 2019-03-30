@@ -1,5 +1,11 @@
 <div cdkDropList 
   cdkDropListOrientation="horizontal" 
-  class="row" (cdkDropListDropped)="order($event)">
-  <div class="example-box" *ngFor="let component of data" cdkDrag>{{component}}</div>
+  [cdkDropListData]="data"
+  id="{{'id'+id}}"
+  class="example-list" (cdkDropListDropped)="order($event)" >
+  <div class="example-box" *ngFor="let component of data; let i = index" cdkDrag>
+    
+    {{component}}
+    <button mat-icon-button (click)="delete(i)"><mat-icon>delete</mat-icon></button>
+  </div>
 </div>
