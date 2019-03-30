@@ -1,10 +1,10 @@
 <div fxFlex fxLayoutAlign="center center">
   <div fxFlex="80">
-    <mat-tab-group>
+    <mat-tab-group (selectedTabChange)="dsl.parseDsl()">
       <mat-tab label="Design">
         <app-editor-design [data]="all" [drop]="drop"></app-editor-design>
       </mat-tab>
-      <mat-tab label="DSL"> Content 2 </mat-tab>
+      <mat-tab label="DSL"><app-dsl [data]="all"></app-dsl></mat-tab>
     </mat-tab-group>
   </div>
 </div>

@@ -20,6 +20,7 @@ import { ToolboxComponent } from './components/toolbox/toolbox.component';
 import { EditorRoutingModule } from './editor-routing.module';
 import { MatInputModule } from '@angular/material';
 import { CheckboxComponent } from './components/component-compiler/components/checkbox/checkbox.component';
+import { DslComponent } from './components/dsl/dsl.component';
 import { SelectComponent } from './components/component-compiler/components/select/select.component';
 import { FormsModule } from '@angular/forms';
 import { TextAreaComponent } from './components/component-compiler/components/text-area/text-area.component';
@@ -52,7 +53,8 @@ import { TextAreaComponent } from './components/component-compiler/components/te
     InputComponent,
     CheckboxComponent,
     SelectComponent,
-    TextAreaComponent
+    TextAreaComponent,
+    DslComponent,
 
   ],
   exports: [

@@ -36,8 +36,7 @@ export class Select extends ComponentDefinition {
 
 export class TextArea extends ComponentDefinition {
     constructor() {
-        super();
-        this.name = 'TextArea';
+        super();        this.name = 'TextArea';
         this.type = TextAreaComponent;
         this.preview = '';
         this.icon = 'format_align_justify';

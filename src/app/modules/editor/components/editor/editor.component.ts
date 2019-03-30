@@ -1,3 +1,4 @@
+import { DslComponent } from './../dsl/dsl.component';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { EditorDesignComponent } from '../editor-design/editor-design.component';
@@ -13,6 +14,7 @@ export class EditorComponent implements OnInit {
 
   @ViewChild(EditorDesignComponent) design: EditorDesignComponent;
   @ViewChild(ToolboxComponent) toolbox: ToolboxComponent;
+  @ViewChild(DslComponent) dsl: DslComponent;
 
 
 
