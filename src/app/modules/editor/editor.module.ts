@@ -24,6 +24,7 @@ import { DslComponent } from './components/dsl/dsl.component';
 import { SelectComponent } from './components/component-compiler/components/select/select.component';
 import { FormsModule } from '@angular/forms';
 import { TextAreaComponent } from './components/component-compiler/components/text-area/text-area.component';
+import { ButtonComponent } from './components/component-compiler/components/button/button.component';
 
 @NgModule({
   imports: [
@@ -55,6 +56,7 @@ import { TextAreaComponent } from './components/component-compiler/components/te
     SelectComponent,
     TextAreaComponent,
     DslComponent,
+    ButtonComponent,
 
   ],
   exports: [
@@ -67,7 +69,8 @@ import { TextAreaComponent } from './components/component-compiler/components/te
     InputComponent,
     CheckboxComponent,
     SelectComponent,
-    TextAreaComponent
+    TextAreaComponent,
+    ButtonComponent
   ]
 })
 export class EditorModule { }

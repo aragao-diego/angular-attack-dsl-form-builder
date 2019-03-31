@@ -5,4 +5,8 @@ export class ComponentDefinition {
     preview: string;
     icon: string;
     config: ComponentConfig;
+
+    constructor() {
+        this.config = new ComponentConfig();
+    }
 }
