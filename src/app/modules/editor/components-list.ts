@@ -1,3 +1,4 @@
+import { ButtonComponent } from './components/component-compiler/components/button/button.component';
 import { CheckboxComponent } from './components/component-compiler/components/checkbox/checkbox.component';
 import { InputComponent } from './components/component-compiler/components/input/input.component';
 import { ComponentDefinition } from './models/component-defintion';
@@ -51,7 +52,18 @@ export class RadioButton extends ComponentDefinition {
         this.name = 'RadioButton';
         this.type = RadioButtonComponent;
         this.preview = '';
-        this.icon = '';
+        this.icon = 'radio_button_checked';
+    }
+}
+
+export class Button extends ComponentDefinition {
+    constructor() {
+        super();
+        this.name = 'Button';
+        this.type = ButtonComponent;
+        this.preview = '';
+        this.icon = 'check_box_outline_blank';
+        this.config.label = 'Click me';
     }
 }
 
@@ -60,5 +72,6 @@ export const COMPONENT_LIST = [
     new Checkbox(),
     new Select(),
     new TextArea(),
-    new RadioButton()
+    new RadioButton(),
+    new Button()
 ];

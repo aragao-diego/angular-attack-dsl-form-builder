@@ -1,3 +1,4 @@
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
@@ -25,6 +26,7 @@ import { SelectComponent } from './components/component-compiler/components/sele
 import { FormsModule } from '@angular/forms';
 import { TextAreaComponent } from './components/component-compiler/components/text-area/text-area.component';
 import { RadioButtonComponent } from './components/component-compiler/components/radio-button/radio-button.component';
+import { ButtonComponent } from './components/component-compiler/components/button/button.component';
 
 @NgModule({
   imports: [
@@ -42,7 +44,8 @@ import { RadioButtonComponent } from './components/component-compiler/components
     MatCheckboxModule,
     MatSelectModule,
     MatButtonModule,
-    MatRadioModule
+    MatRadioModule,
+    MatToolbarModule
     ],
   declarations: [
     EditorComponent,
@@ -59,6 +62,7 @@ import { RadioButtonComponent } from './components/component-compiler/components
     TextAreaComponent,
     DslComponent,
     RadioButtonComponent,
+    ButtonComponent
   ],
   exports: [
     EditorComponent,
@@ -71,7 +75,8 @@ import { RadioButtonComponent } from './components/component-compiler/components
     CheckboxComponent,
     SelectComponent,
     TextAreaComponent,
-    RadioButtonComponent
+    RadioButtonComponent,
+    ButtonComponent
   ]
 })
 export class EditorModule { }
