@@ -1,3 +1,4 @@
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
@@ -40,7 +41,8 @@ import { ButtonComponent } from './components/component-compiler/components/butt
     MatDialogModule,
     MatFormFieldModule,
     MatCheckboxModule,
-    MatSelectModule
+    MatSelectModule,
+    MatToolbarModule
     ],
   declarations: [
     EditorComponent,

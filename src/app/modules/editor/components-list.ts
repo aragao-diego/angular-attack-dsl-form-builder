@@ -51,7 +51,7 @@ export class Button extends ComponentDefinition {
         this.name = 'Button';
         this.type = ButtonComponent;
         this.preview = '';
-        this.icon = 'format_align_justify';
+        this.icon = 'check_box_outline_blank';
         this.config.label = 'Click me';
     }
 }
