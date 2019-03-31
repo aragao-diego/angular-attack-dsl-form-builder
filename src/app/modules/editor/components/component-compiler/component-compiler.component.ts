@@ -13,9 +13,7 @@ export class ComponentCompilerComponent implements OnInit {
   @Input() component: ComponentDefinition;
 
   constructor(
-    private componentFactoryResolver: ComponentFactoryResolver,
-    @Inject(Renderer) private renderer: Renderer,
-    @Inject(ElementRef) private element: ElementRef
+    private componentFactoryResolver: ComponentFactoryResolver
   ) {
   }
 

@@ -5,6 +5,8 @@ import { ComponentDefinition } from './models/component-defintion';
 import { SelectComponent } from './components/component-compiler/components/select/select.component';
 import { TextAreaComponent } from './components/component-compiler/components/text-area/text-area.component';
 import { AutoCompleteComponent } from './components/component-compiler/components/auto-complete/auto-complete.component';
+import { TestComponent } from './components/test/test.component';
+import { RadioButtonComponent } from './components/component-compiler/components/radio-button/radio-button.component';
 
 export class Input extends ComponentDefinition {
     constructor() {
@@ -56,11 +58,22 @@ export class AutoCompete extends ComponentDefinition {
     }
 }
 
+export class RadioButton extends ComponentDefinition {
+    constructor() {
+        super();
+        this.name = 'RadioButton';
+        this.type = RadioButtonComponent;
+        this.preview = '';
+        this.icon = 'radio_button_checked';
+    }
+}
+
 export class Button extends ComponentDefinition {
     constructor() {
         super();
         this.name = 'Button';
         this.type = ButtonComponent;
+        this.configComponent = TestComponent;
         this.preview = '';
         this.icon = 'check_box_outline_blank';
         this.config.label = 'Click me';
@@ -73,5 +86,6 @@ export const COMPONENT_LIST = [
     new Select(),
     new TextArea(),
     new AutoCompete(),
+    new RadioButton(),
     new Button()
 ];
