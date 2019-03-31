@@ -4,7 +4,7 @@ import { ComponentDefinition } from 'src/app/modules/editor/models/component-def
 @Component({
   selector: 'app-select',
   template: `
-    <mat-form-field fxLayout="100%">
+    <mat-form-field fxLayout="100%" floatLabel="auto">
       <mat-label>Select Name</mat-label>
       <mat-select>
         <mat-option *ngFor="let item of items" [value]="item.value">

@@ -2,7 +2,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatDialogModule, MatFormFieldModule, MatSelect, MatSelectModule } from '@angular/material';
+import { MatDialogModule, MatFormFieldModule, MatSelect, MatSelectModule, MatAutocompleteModule, MatAutocomplete } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material';
 import { MatDividerModule } from '@angular/material/divider';
@@ -22,8 +22,9 @@ import { MatInputModule } from '@angular/material';
 import { CheckboxComponent } from './components/component-compiler/components/checkbox/checkbox.component';
 import { DslComponent } from './components/dsl/dsl.component';
 import { SelectComponent } from './components/component-compiler/components/select/select.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TextAreaComponent } from './components/component-compiler/components/text-area/text-area.component';
+import { AutoCompleteComponent } from './components/component-compiler/components/auto-complete/auto-complete.component';
 
 @NgModule({
   imports: [
@@ -39,7 +40,10 @@ import { TextAreaComponent } from './components/component-compiler/components/te
     MatDialogModule,
     MatFormFieldModule,
     MatCheckboxModule,
-    MatSelectModule
+    MatSelectModule,
+    MatAutocompleteModule,
+    FormsModule,
+    ReactiveFormsModule,
     ],
   declarations: [
     EditorComponent,
@@ -55,7 +59,7 @@ import { TextAreaComponent } from './components/component-compiler/components/te
     SelectComponent,
     TextAreaComponent,
     DslComponent,
-
+    AutoCompleteComponent,
   ],
   exports: [
     EditorComponent,
@@ -67,7 +71,8 @@ import { TextAreaComponent } from './components/component-compiler/components/te
     InputComponent,
     CheckboxComponent,
     SelectComponent,
-    TextAreaComponent
+    TextAreaComponent,
+    AutoCompleteComponent,
   ]
 })
 export class EditorModule { }
