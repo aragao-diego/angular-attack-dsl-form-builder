@@ -12,7 +12,7 @@ export interface User {
   selector: 'app-auto-complete',
   template: `
     <mat-form-field fxFlex floatLabel="auto">
-      <input type="text" placeholder="Auto Complete" aria-label="Auto Complete" matInput [formControl]="myControl"
+      <input type="text" [placeholder]="config.config.label" aria-label="Autocomplete" matInput [formControl]="myControl"
       [matAutocomplete]="auto">
       <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
         <mat-option *ngFor="let option of filteredOptions | async" [value]="option">

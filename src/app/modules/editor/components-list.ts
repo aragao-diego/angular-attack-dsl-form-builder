@@ -49,6 +49,7 @@ export class TextArea extends ComponentDefinition {
         this.type = TextAreaComponent;
         this.preview = '';
         this.icon = 'format_align_justify';
+        this.config.label = 'Label';
     }
 }
 
@@ -59,6 +60,7 @@ export class AutoCompete extends ComponentDefinition {
         this.type = AutoCompleteComponent;
         this.preview = '';
         this.icon = 'format_color_text';
+        this.config.label = 'Label';
     }
 }
 
