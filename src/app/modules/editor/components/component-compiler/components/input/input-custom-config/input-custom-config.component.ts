@@ -4,12 +4,6 @@ import { ComponentDefinition } from '../../../../../models/component-defintion';
 @Component({
   selector: 'app-input-custom-config',
   template: `
-  <form class="example-form">
-  <mat-form-field class="example-full-width">
-    <input [(ngModel)]="component.config.custom.label" matInput placeholder="Label" [ngModelOptions]="{standalone: true}">
-  </mat-form-field>
-
-
   <div *ngFor="let validation of validations">
     <mat-form-field class="example-full-width">
       <mat-label>{{capitalize(validation.name)}}</mat-label>
