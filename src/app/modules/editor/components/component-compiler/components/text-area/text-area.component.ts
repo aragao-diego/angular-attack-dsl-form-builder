@@ -4,7 +4,8 @@ import { ComponentDefinition } from 'src/app/modules/editor/models/component-def
 @Component({
   selector: 'app-text-area',
   template: `
-    <mat-form-field class="example-full-width">
+    <mat-form-field fxFlex floatLabel="auto">
+      <mat-label>Text Area</mat-label>
       <textarea matInput placeholder="Text Area"></textarea>
     </mat-form-field>
   `,

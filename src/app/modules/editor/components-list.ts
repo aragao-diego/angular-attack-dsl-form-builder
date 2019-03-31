@@ -7,6 +7,7 @@ import { TextAreaComponent } from './components/component-compiler/components/te
 import { AutoCompleteComponent } from './components/component-compiler/components/auto-complete/auto-complete.component';
 import { TestComponent } from './components/test/test.component';
 import { RadioButtonComponent } from './components/component-compiler/components/radio-button/radio-button.component';
+import { DatePickerComponent } from './components/component-compiler/components/date-picker/date-picker.component';
 
 export class Input extends ComponentDefinition {
     constructor() {
@@ -80,6 +81,16 @@ export class Button extends ComponentDefinition {
     }
 }
 
+export class DatePicker extends ComponentDefinition {
+    constructor() {
+        super();
+        this.name = 'DatePicker';
+        this.type = DatePickerComponent;
+        this.preview = '';
+        this.icon = 'date_range';
+    }
+}
+
 export const COMPONENT_LIST = [
     new Input(),
     new Checkbox(),
@@ -87,5 +98,6 @@ export const COMPONENT_LIST = [
     new TextArea(),
     new AutoCompete(),
     new RadioButton(),
-    new Button()
+    new Button(),
+    new DatePicker()
 ];

@@ -3,7 +3,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatDialogModule, MatFormFieldModule, MatSelectModule, MatAutocompleteModule, MatRadioModule } from '@angular/material';
+import { MatDialogModule, MatFormFieldModule, MatSelectModule, MatAutocompleteModule, MatRadioModule, MatDatepickerModule, MatNativeDateModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material';
 import { MatDividerModule } from '@angular/material/divider';
@@ -28,6 +28,7 @@ import { TextAreaComponent } from './components/component-compiler/components/te
 import { AutoCompleteComponent } from './components/component-compiler/components/auto-complete/auto-complete.component';
 import { RadioButtonComponent } from './components/component-compiler/components/radio-button/radio-button.component';
 import { ButtonComponent } from './components/component-compiler/components/button/button.component';
+import { DatePickerComponent } from './components/component-compiler/components/date-picker/date-picker.component';
 
 @NgModule({
   imports: [
@@ -51,7 +52,9 @@ import { ButtonComponent } from './components/component-compiler/components/butt
     MatToolbarModule,
     FormsModule,
     MatRadioModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatDatepickerModule,
+    MatNativeDateModule
     ],
   declarations: [
     EditorComponent,
@@ -70,7 +73,8 @@ import { ButtonComponent } from './components/component-compiler/components/butt
     AutoCompleteComponent,
     ButtonComponent,
     RadioButtonComponent,
-    ButtonComponent
+    ButtonComponent,
+    DatePickerComponent,
   ],
   exports: [
     EditorComponent,
@@ -86,7 +90,8 @@ import { ButtonComponent } from './components/component-compiler/components/butt
     AutoCompleteComponent,
     ButtonComponent,
     RadioButtonComponent,
-    ButtonComponent
+    ButtonComponent,
+    DatePickerComponent,
   ]
 })
 export class EditorModule { }
