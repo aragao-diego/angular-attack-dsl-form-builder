@@ -1,19 +1,24 @@
-<div fxFlex fxLayoutAlign="center center">
-  <div fxFlex="80">
-    <mat-tab-group (selectedTabChange)="dsl.parseDsl()">
-      <mat-tab label="Design">
-        <app-editor-design [data]="all" [drop]="drop"></app-editor-design>
-      </mat-tab>
-      <mat-tab label="DSL"><app-dsl [data]="all"></app-dsl></mat-tab>
-    </mat-tab-group>
+<div fxLayoutFill fxLayout="column">
+  <div>
+    <div fxFlex fxLayoutFill fxLayoutAlign="center start">
+      <div fxFlex="80">
+        <mat-tab-group (selectedTabChange)="dsl.parseDsl()">
+          <mat-tab label="Design">
+            <app-editor-design [editMode]="editMode" [data]="all" [drop]="drop"></app-editor-design>
+          </mat-tab>
+          <mat-tab label="DSL"><app-dsl [data]="all"></app-dsl></mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+    <app-toolbox 
+    [componentsList]="componentsList" 
+    [addComponent]="addComponent" 
+    [data]="even" 
+    [connected]="all" 
+    [drop]="drop"
+    [all]="all">
+    </app-toolbox>
   </div>
+  <mat-slide-toggle [(ngModel)]="editMode">Edit mode</mat-slide-toggle>
+
 </div>
-<app-toolbox 
-  [componentsList]="componentsList" 
-  [addComponent]="addComponent" 
-  [data]="even" 
-  [connected]="all" 
-  [drop]="drop"
-  [all]="all">
-  
-</app-toolbox>
