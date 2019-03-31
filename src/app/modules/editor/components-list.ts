@@ -38,6 +38,7 @@ export class Select extends ComponentDefinition {
         this.type = SelectComponent;
         this.preview = '';
         this.icon = 'arrow_drop_down';
+        this.config.label = 'Label';
     }
 }
 
