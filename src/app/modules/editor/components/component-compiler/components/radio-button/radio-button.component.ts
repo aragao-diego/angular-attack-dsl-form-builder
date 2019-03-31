@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { ComponentDefinition } from 'src/app/modules/editor/models/component-defintion';
+import { Component, OnInit, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-radio-button',
   template: `
-  <label id="example-radio-group-label">Pick your favorite season</label>
+  <label id="example-radio-group-label">{{config.config.label}}</label>
   <mat-radio-group class="example-radio-group">
     <mat-radio-button class="example-radio-button" *ngFor="let item of items" [value]="item">
       {{item}}
@@ -13,6 +15,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./radio-button.component.scss']
 })
 export class RadioButtonComponent implements OnInit {
+
+  @Input() config: ComponentDefinition;
 
   constructor() { }
 

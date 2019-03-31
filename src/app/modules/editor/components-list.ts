@@ -71,6 +71,7 @@ export class RadioButton extends ComponentDefinition {
         this.type = RadioButtonComponent;
         this.preview = '';
         this.icon = 'radio_button_checked';
+        this.config.label = 'Label';
     }
 }
 
@@ -93,6 +94,7 @@ export class DatePicker extends ComponentDefinition {
         this.type = DatePickerComponent;
         this.preview = '';
         this.icon = 'date_range';
+        this.config.label = 'Label';
     }
 }
 
