@@ -1,3 +1,4 @@
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
@@ -25,6 +26,7 @@ import { SelectComponent } from './components/component-compiler/components/sele
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TextAreaComponent } from './components/component-compiler/components/text-area/text-area.component';
 import { AutoCompleteComponent } from './components/component-compiler/components/auto-complete/auto-complete.component';
+import { ButtonComponent } from './components/component-compiler/components/button/button.component';
 
 @NgModule({
   imports: [
@@ -44,6 +46,7 @@ import { AutoCompleteComponent } from './components/component-compiler/component
     MatAutocompleteModule,
     FormsModule,
     ReactiveFormsModule,
+    MatToolbarModule,
     ],
   declarations: [
     EditorComponent,
@@ -60,6 +63,8 @@ import { AutoCompleteComponent } from './components/component-compiler/component
     TextAreaComponent,
     DslComponent,
     AutoCompleteComponent,
+    ButtonComponent,
+
   ],
   exports: [
     EditorComponent,
@@ -73,6 +78,7 @@ import { AutoCompleteComponent } from './components/component-compiler/component
     SelectComponent,
     TextAreaComponent,
     AutoCompleteComponent,
+    ButtonComponent,
   ]
 })
 export class EditorModule { }

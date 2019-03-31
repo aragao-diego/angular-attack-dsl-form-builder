@@ -1,3 +1,4 @@
+import { ButtonComponent } from './components/component-compiler/components/button/button.component';
 import { CheckboxComponent } from './components/component-compiler/components/checkbox/checkbox.component';
 import { InputComponent } from './components/component-compiler/components/input/input.component';
 import { ComponentDefinition } from './models/component-defintion';
@@ -37,7 +38,8 @@ export class Select extends ComponentDefinition {
 
 export class TextArea extends ComponentDefinition {
     constructor() {
-        super();        this.name = 'TextArea';
+        super();
+        this.name = 'TextArea';
         this.type = TextAreaComponent;
         this.preview = '';
         this.icon = 'format_align_justify';
@@ -46,10 +48,22 @@ export class TextArea extends ComponentDefinition {
 
 export class AutoCompete extends ComponentDefinition {
     constructor() {
-        super();        this.name = 'TextArea';
+        super();
+        this.name = 'AutoComplete';
         this.type = AutoCompleteComponent;
         this.preview = '';
-        this.icon = 'format_align_justify';
+        this.icon = 'format_color_text';
+    }
+}
+
+export class Button extends ComponentDefinition {
+    constructor() {
+        super();
+        this.name = 'Button';
+        this.type = ButtonComponent;
+        this.preview = '';
+        this.icon = 'check_box_outline_blank';
+        this.config.label = 'Click me';
     }
 }
 
@@ -58,5 +72,6 @@ export const COMPONENT_LIST = [
     new Checkbox(),
     new Select(),
     new TextArea(),
-    new AutoCompete()
+    new AutoCompete(),
+    new Button()
 ];
