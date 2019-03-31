@@ -5,7 +5,7 @@ import { ComponentDefinition } from './../../../../models/component-defintion';
 
 @Component({
   selector: 'app-button',
-  template: `<button mat-raised-button>{{config.config.label}}</button>`,
+  template: `<button mat-raised-button>{{config.config.label}}{{config.config.custom.teste}}</button>`,
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent implements OnInit {

@@ -1,3 +1,20 @@
-<p>
-  component-config-dialog works!
-</p>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input [(ngModel)]="data.config.label" matInput placeholder="Label" [ngModelOptions]="{standalone: true}">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input [(ngModel)]="data.config.size" matInput placeholder="Size (in %)" [ngModelOptions]="{standalone: true}" />
+  </mat-form-field>
+
+  <div class="example-full-width">
+    <mat-checkbox [(ngModel)]="data.config.required" [ngModelOptions]="{standalone: true}">Required</mat-checkbox>
+  </div>
+
+  <div componentContainer></div>
+
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+  </div>
+</form>

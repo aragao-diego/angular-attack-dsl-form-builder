@@ -2,6 +2,7 @@ import { ComponentConfig } from './component-config';
 export class ComponentDefinition {
     name: string;
     type: { new(...args: any[]): any; };
+    configComponent?: { new(...args: any[]): any; };
     preview: string;
     icon: string;
     config: ComponentConfig;

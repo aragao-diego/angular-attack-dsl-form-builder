@@ -42,7 +42,8 @@ import { ButtonComponent } from './components/component-compiler/components/butt
     MatFormFieldModule,
     MatCheckboxModule,
     MatSelectModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FormsModule
     ],
   declarations: [
     EditorComponent,
