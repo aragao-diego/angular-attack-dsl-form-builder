@@ -27,6 +27,7 @@ export class Checkbox extends ComponentDefinition {
         this.type = CheckboxComponent;
         this.preview = '';
         this.icon = 'check_box';
+        this.config.label = 'Label';
     }
 }
 

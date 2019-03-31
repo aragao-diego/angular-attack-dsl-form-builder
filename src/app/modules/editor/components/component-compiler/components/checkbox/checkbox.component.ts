@@ -6,7 +6,7 @@ import { ComponentDefinition } from '../../../../models/component-defintion';
   selector: 'app-checkbox',
   template: `
   <div fxLayout="column">
-    <mat-label>Exemplo checkbox</mat-label>
+    <mat-label>{{config.config.label}}</mat-label>
     <mat-checkbox *ngFor="let item of items">{{item}}</mat-checkbox>
   </div>
 
