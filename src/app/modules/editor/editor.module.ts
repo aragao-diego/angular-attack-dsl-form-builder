@@ -3,7 +3,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatDialogModule, MatFormFieldModule, MatSelect, MatSelectModule } from '@angular/material';
+import { MatDialogModule, MatFormFieldModule, MatSelect, MatSelectModule, MatRadioModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material';
 import { MatDividerModule } from '@angular/material/divider';
@@ -25,6 +25,7 @@ import { DslComponent } from './components/dsl/dsl.component';
 import { SelectComponent } from './components/component-compiler/components/select/select.component';
 import { FormsModule } from '@angular/forms';
 import { TextAreaComponent } from './components/component-compiler/components/text-area/text-area.component';
+import { RadioButtonComponent } from './components/component-compiler/components/radio-button/radio-button.component';
 import { ButtonComponent } from './components/component-compiler/components/button/button.component';
 
 @NgModule({
@@ -43,7 +44,9 @@ import { ButtonComponent } from './components/component-compiler/components/butt
     MatCheckboxModule,
     MatSelectModule,
     MatToolbarModule,
-    FormsModule
+    FormsModule,
+    MatRadioModule,
+    MatToolbarModule
     ],
   declarations: [
     EditorComponent,
@@ -59,8 +62,8 @@ import { ButtonComponent } from './components/component-compiler/components/butt
     SelectComponent,
     TextAreaComponent,
     DslComponent,
-    ButtonComponent,
-
+    RadioButtonComponent,
+    ButtonComponent
   ],
   exports: [
     EditorComponent,
@@ -73,6 +76,7 @@ import { ButtonComponent } from './components/component-compiler/components/butt
     CheckboxComponent,
     SelectComponent,
     TextAreaComponent,
+    RadioButtonComponent,
     ButtonComponent
   ]
 })

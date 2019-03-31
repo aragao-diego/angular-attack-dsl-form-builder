@@ -5,6 +5,7 @@ import { ComponentDefinition } from './models/component-defintion';
 import { SelectComponent } from './components/component-compiler/components/select/select.component';
 import { TextAreaComponent } from './components/component-compiler/components/text-area/text-area.component';
 import { TestComponent } from './components/test/test.component';
+import { RadioButtonComponent } from './components/component-compiler/components/radio-button/radio-button.component';
 
 export class Input extends ComponentDefinition {
     constructor() {
@@ -46,6 +47,16 @@ export class TextArea extends ComponentDefinition {
     }
 }
 
+export class RadioButton extends ComponentDefinition {
+    constructor() {
+        super();
+        this.name = 'RadioButton';
+        this.type = RadioButtonComponent;
+        this.preview = '';
+        this.icon = 'radio_button_checked';
+    }
+}
+
 export class Button extends ComponentDefinition {
     constructor() {
         super();
@@ -63,5 +74,6 @@ export const COMPONENT_LIST = [
     new Checkbox(),
     new Select(),
     new TextArea(),
+    new RadioButton(),
     new Button()
 ];
