@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   template: `
   <mat-form-field fxFlex floatLabel="auto">
     <mat-label>{{config.config.label}}</mat-label>
-    <input matInput placeholder="Input">
+    <input matInput [required]="config.config.required" placeholder="Input">
   </mat-form-field>
   ` ,
   styleUrls: ['./input.component.scss']
