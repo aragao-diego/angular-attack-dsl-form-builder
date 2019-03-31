@@ -7,7 +7,7 @@
     
     <app-component-compiler fxFlex [component]="component"></app-component-compiler>
     <!-- <img [src]="component.preview" [alt]="component.title" /> -->
-    <div fxLayout="row" fxLayoutAlign="end">
+    <div *ngIf="editMode" fxLayout="row" fxLayoutAlign="end">
       <button type="button" mat-icon-button (click)="config(i)"><mat-icon>settings</mat-icon></button>
       <button mat-icon-button (click)="delete(i)"><mat-icon>delete</mat-icon></button>
     </div>

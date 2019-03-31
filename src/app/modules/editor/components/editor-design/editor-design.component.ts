@@ -11,6 +11,7 @@ export class EditorDesignComponent implements OnInit {
   rows = [];
   @Input() data;
   @Input() drop;
+  @Input() editMode;
   even = [10];
 
   constructor() { }

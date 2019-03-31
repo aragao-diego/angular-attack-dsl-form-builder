@@ -6,8 +6,8 @@ import { ComponentDefinition } from '../../../../models/component-defintion';
   selector: 'app-input',
   template: `
   <mat-form-field fxFlex floatLabel="auto">
-    <mat-label>{{this.config.config.label}}</mat-label>
-    <input matInput placeholder="Input">
+    <mat-label>{{config.config.label}}</mat-label>
+    <input matInput [required]="config.config.required" placeholder="Input">
   </mat-form-field>
   ` ,
   styleUrls: ['./input.component.scss']

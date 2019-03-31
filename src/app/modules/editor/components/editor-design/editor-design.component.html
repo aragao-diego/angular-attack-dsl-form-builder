@@ -2,7 +2,7 @@
   <form>
     <div id="all" cdkDropList [cdkDropListData]="data" class="example-list" (cdkDropListDropped)="drop($event)">
       <div class="example-box" *ngFor="let row of data;let i = index" [cdkDragData]="row" cdkDrag>
-        <app-row fxFlex [id]="i" [data]="row"></app-row>
+        <app-row [editMode]="editMode" fxFlex [id]="i" [data]="row"></app-row>
       </div>
     </div>
   </form>

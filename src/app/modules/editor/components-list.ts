@@ -18,6 +18,7 @@ export class Input extends ComponentDefinition {
         this.preview = 'assets/img/input.png';
         this.configComponent = InputCustomConfigComponent;
         this.icon = 'text_fields';
+        this.config.label = 'Label';
     }
 }
 
@@ -28,6 +29,7 @@ export class Checkbox extends ComponentDefinition {
         this.type = CheckboxComponent;
         this.preview = '';
         this.icon = 'check_box';
+        this.config.label = 'Label';
     }
 }
 
@@ -38,6 +40,7 @@ export class Select extends ComponentDefinition {
         this.type = SelectComponent;
         this.preview = '';
         this.icon = 'arrow_drop_down';
+        this.config.label = 'Label';
     }
 }
 
@@ -48,6 +51,7 @@ export class TextArea extends ComponentDefinition {
         this.type = TextAreaComponent;
         this.preview = '';
         this.icon = 'format_align_justify';
+        this.config.label = 'Label';
     }
 }
 
@@ -58,6 +62,7 @@ export class AutoCompete extends ComponentDefinition {
         this.type = AutoCompleteComponent;
         this.preview = '';
         this.icon = 'format_color_text';
+        this.config.label = 'Label';
     }
 }
 
@@ -68,6 +73,7 @@ export class RadioButton extends ComponentDefinition {
         this.type = RadioButtonComponent;
         this.preview = '';
         this.icon = 'radio_button_checked';
+        this.config.label = 'Label';
     }
 }
 
@@ -90,6 +96,7 @@ export class DatePicker extends ComponentDefinition {
         this.type = DatePickerComponent;
         this.preview = '';
         this.icon = 'date_range';
+        this.config.label = 'Label';
     }
 }
 

@@ -17,7 +17,7 @@ export class EditorComponent implements OnInit {
   @ViewChild(DslComponent) dsl: DslComponent;
 
 
-
+  editMode = true;
   even = [[]];
   all = [];
   componentsList = COMPONENT_LIST;

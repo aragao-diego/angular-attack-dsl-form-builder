@@ -12,6 +12,7 @@ export class RowComponent implements OnInit {
 
   @Input() data;
   @Input() id;
+  @Input() editMode;
 
   constructor(public dialog: MatDialog) { }
 

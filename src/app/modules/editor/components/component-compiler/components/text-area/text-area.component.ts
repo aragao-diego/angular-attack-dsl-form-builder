@@ -5,8 +5,7 @@ import { ComponentDefinition } from 'src/app/modules/editor/models/component-def
   selector: 'app-text-area',
   template: `
     <mat-form-field fxFlex floatLabel="auto">
-      <mat-label>Text Area</mat-label>
-      <textarea matInput placeholder="Text Area"></textarea>
+      <textarea matInput [placeholder]="config.config.label"></textarea>
     </mat-form-field>
   `,
   styleUrls: ['./text-area.component.scss']
