@@ -19,6 +19,11 @@ export class Input extends ComponentDefinition {
         this.configComponent = InputCustomConfigComponent;
         this.icon = 'text_fields';
         this.config.label = 'Label';
+        this.config.custom = {
+            maxlength: 10,
+            minlength: 2,
+            mask: ''
+        };
     }
 }
 

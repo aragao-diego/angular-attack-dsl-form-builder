@@ -26,8 +26,8 @@ export class InputCustomConfigComponent implements OnInit {
 
   ngOnInit() {
     this.validations = [
-      { name: 'minlenght', type: 'number' },
-      { name: 'maxlenght', type: 'number' },
+      { name: 'minlength', type: 'number' },
+      { name: 'maxlength', type: 'number' },
       { name: 'mask', type: 'text' },
       { name: 'pattern', type: 'text' }
     ];

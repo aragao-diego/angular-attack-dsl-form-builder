@@ -7,7 +7,7 @@ import { ComponentDefinition } from '../../../../models/component-defintion';
   template: `
   <mat-form-field fxFlex floatLabel="auto">
     <mat-label>{{config.config.label}}</mat-label>
-    <input matInput [required]="config.config.required" placeholder="Input">
+    <input matInput [minLength]="config.config.custom.minlength" [maxLength]="config.config.custom.maxlength" [required]="config.config.required" placeholder="Input">
   </mat-form-field>
   ` ,
   styleUrls: ['./input.component.scss']
