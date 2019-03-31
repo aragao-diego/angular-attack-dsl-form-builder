@@ -3,12 +3,12 @@
   [cdkDropListData]="data"
   id="{{'id'+id}}"
   class="example-list" (cdkDropListDropped)="order($event)" >
-  <div class="example-box" *ngFor="let component of data; let i = index" cdkDrag>
+  <div class="example-box" fxLayout="row" fxLayoutAlign="start center" [fxFlex]="component.config.size" *ngFor="let component of data; let i = index" cdkDrag>
     
-    <app-component-compiler [component]="component"></app-component-compiler>
+    <app-component-compiler fxFlex [component]="component"></app-component-compiler>
     <!-- <img [src]="component.preview" [alt]="component.title" /> -->
     <div fxLayout="row" fxLayoutAlign="end">
-      <button mat-icon-button (click)="config(i)"><mat-icon>settings</mat-icon></button>
+      <button type="button" mat-icon-button (click)="config(i)"><mat-icon>settings</mat-icon></button>
       <button mat-icon-button (click)="delete(i)"><mat-icon>delete</mat-icon></button>
     </div>
   </div>

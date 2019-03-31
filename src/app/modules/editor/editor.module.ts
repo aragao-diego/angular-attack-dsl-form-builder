@@ -43,7 +43,8 @@ import { ButtonComponent } from './components/component-compiler/components/butt
     MatFormFieldModule,
     MatCheckboxModule,
     MatSelectModule,
-    MatButtonModule,
+    MatToolbarModule,
+    FormsModule,
     MatRadioModule,
     MatToolbarModule
     ],

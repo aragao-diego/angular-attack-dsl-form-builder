@@ -4,6 +4,7 @@ import { InputComponent } from './components/component-compiler/components/input
 import { ComponentDefinition } from './models/component-defintion';
 import { SelectComponent } from './components/component-compiler/components/select/select.component';
 import { TextAreaComponent } from './components/component-compiler/components/text-area/text-area.component';
+import { TestComponent } from './components/test/test.component';
 import { RadioButtonComponent } from './components/component-compiler/components/radio-button/radio-button.component';
 
 export class Input extends ComponentDefinition {
@@ -61,6 +62,7 @@ export class Button extends ComponentDefinition {
         super();
         this.name = 'Button';
         this.type = ButtonComponent;
+        this.configComponent = TestComponent;
         this.preview = '';
         this.icon = 'check_box_outline_blank';
         this.config.label = 'Click me';

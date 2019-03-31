@@ -16,15 +16,12 @@ export class RowComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
-    console.log(this.id);
   }
 
   order(event: CdkDragDrop<any[]>) {
-    console.log('order');
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
-      console.log(event.item);
       this.data.push(event.item.data);
     }
   }
@@ -40,7 +37,9 @@ export class RowComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      if (result) {
+        this.data[i] = result;
+      }
     });
   }
 
