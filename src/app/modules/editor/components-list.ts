@@ -16,6 +16,7 @@ export class Input extends ComponentDefinition {
         this.type = InputComponent;
         this.preview = 'assets/img/input.png';
         this.icon = 'text_fields';
+        this.config.label = 'Label';
     }
 }
 

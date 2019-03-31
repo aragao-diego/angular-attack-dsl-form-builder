@@ -5,7 +5,7 @@ import { Component, OnInit, Input } from '@angular/core';
   selector: 'app-input',
   template: `
   <mat-form-field fxFlex floatLabel="auto">
-    <mat-label>Input</mat-label>
+    <mat-label>{{config.config.label}}</mat-label>
     <input matInput placeholder="Input">
   </mat-form-field>
   ` ,
