@@ -8,6 +8,7 @@ import { AutoCompleteComponent } from './components/component-compiler/component
 import { TestComponent } from './components/test/test.component';
 import { RadioButtonComponent } from './components/component-compiler/components/radio-button/radio-button.component';
 import { DatePickerComponent } from './components/component-compiler/components/date-picker/date-picker.component';
+import { InputCustomConfigComponent } from './components/component-compiler/components/input/input-custom-config/input-custom-config.component';
 
 export class Input extends ComponentDefinition {
     constructor() {
@@ -15,6 +16,7 @@ export class Input extends ComponentDefinition {
         this.name = 'Input';
         this.type = InputComponent;
         this.preview = 'assets/img/input.png';
+        this.configComponent = InputCustomConfigComponent;
         this.icon = 'text_fields';
     }
 }

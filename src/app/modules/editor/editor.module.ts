@@ -29,6 +29,7 @@ import { AutoCompleteComponent } from './components/component-compiler/component
 import { RadioButtonComponent } from './components/component-compiler/components/radio-button/radio-button.component';
 import { ButtonComponent } from './components/component-compiler/components/button/button.component';
 import { DatePickerComponent } from './components/component-compiler/components/date-picker/date-picker.component';
+import { InputCustomConfigComponent } from './components/component-compiler/components/input/input-custom-config/input-custom-config.component';
 
 @NgModule({
   imports: [
@@ -57,6 +58,7 @@ import { DatePickerComponent } from './components/component-compiler/components/
     MatNativeDateModule
     ],
   declarations: [
+    InputCustomConfigComponent,
     EditorComponent,
     ToolboxComponent,
     EditorDesignComponent,
@@ -92,6 +94,7 @@ import { DatePickerComponent } from './components/component-compiler/components/
     RadioButtonComponent,
     ButtonComponent,
     DatePickerComponent,
+    InputCustomConfigComponent
   ]
 })
 export class EditorModule { }
