@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "preinstall": "npm install -g @angular/cli@latest",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
+    "postinstall": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
